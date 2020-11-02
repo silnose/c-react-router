@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 import "./generic-page.css";
 
 class NotFound extends PureComponent {
@@ -9,7 +9,7 @@ class NotFound extends PureComponent {
 
   handleRandomVideo = () => {
     const random = Math.round(Math.random() * (10 - 1) + 1);
-    this.props.history.push(`/videos?id=${random}`);
+    this.props.history.push(`/videos/${random}`);
   };
 
   render() {
@@ -30,4 +30,4 @@ class NotFound extends PureComponent {
   }
 }
 
-export default NotFound;
+export default withRouter(NotFound);

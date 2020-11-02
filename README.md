@@ -27,7 +27,7 @@ React Router nos ayudara a manejar múltiples paginas dentro de nuestra aplicaci
 
 **_A.K.A el que nos sirve para renderizar una ruta especifica. Perfecto para Server Side Render _**
 
-## **Navive Router**
+## **Native Router**
 
 **_A.K.A el sirve para usar react router con react native _**
 
@@ -162,4 +162,15 @@ export default withRouter(Header);
 
 # Server Side Render (SSR)
 
-## Webpack
+## Static Router
+
+Los métodos utilizados de HTML5 para el BrowserRouter no existen en Node (server side), por eso se debe utilizar StaticRouter.
+
+Dentro de nuestro proyecto en el archivo app.js encontraremos varios componentes que solo funcionan del lado del navegador, necesitamos separar las cosas en un archivo de compilación para el cliente y uno para el servidor.
+
+## ReactDOMServer
+
+Al momento de renderizar nuestros componentes en React hemos estado utilizando el método render de reactDOM, pero este método solo funciona en el navegador. Para poder renderizar en el servidor haremos uso de reactDOMServer, cuenta con cuatro métodos de los cuales dos se utilizan dentro de un stream, los otros dos métodos son:
+
+renderToString: te sirve para hacer server render y re-renderizar en el navegador.
+renderToStaticMarkup: este método te sirve si quieres hacer un server render que NO utilice un renderizado en el navegador.
