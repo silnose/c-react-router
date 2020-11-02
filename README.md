@@ -174,3 +174,19 @@ Al momento de renderizar nuestros componentes en React hemos estado utilizando e
 
 renderToString: te sirve para hacer server render y re-renderizar en el navegador.
 renderToStaticMarkup: este método te sirve si quieres hacer un server render que NO utilice un renderizado en el navegador.
+
+## Licencia 📄
+
+MIT
+
+## Conceptos Aprendidos 🤓
+
+- <https://platzi.com/cursos/react-router/>
+
+## Certificado
+
+- [Diploma](./readme-static/diploma-react-router.pdf)
+
+---
+
+👩‍💻 with ❤️ by [silnose](https://github.com/silnose) 😊
